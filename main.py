@@ -351,8 +351,6 @@ def show_menu(username):
                     else:
                         messagebox.showerror("File Sharing Failed", share_file_response.json().get("error"))
 
-
-
             selected_indices = listbox.curselection()
             selected_files = [listbox.get(i) for i in selected_indices]
             dialog.destroy()
