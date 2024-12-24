@@ -39,32 +39,38 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
 5. Generate the SSL Certificates:
    1. **Boot up Git Bash** and type in the following command:
-      - By default, Git Bash includes the ability to create SSL certificates. Run the following command to generate them:
-        
+      - By default, Git Bash includes the ability to create SSL certificates.
+      - Run the following command to generate them:
+        **1. Generate a Private Key:**
         ```bash
-        openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pem
+        openssl genrsa -out private.key 2048
         ```
-        ![Example](assets/ssl_creation.jpg)
-   3. Let's break down what everything means:
-      - **openssl req**: This command tells OpenSSL to create a new certificate request
-      - **-newkey rsa:2048**: This creates a new RSA private key with a length of 2048 bits.
-      - **-nodes**: This option means "No DES," which ensures that the private key will not be encrypted with a passphrase (making it easier for servers to use).
-      - **-keyout key.pem**: This specifies the file where the private key will be saved (**key.pem**).
-      - **-x509**:  This tells OpenSSL to create a self-signed certificate (instead of generating a certificate signing request (CSR)).
-           - This is important because we are testing locally. For production environments, you'd need to get a certificate from a trusted Certificate Authority (CA).
-      - **-days 365**: This sets the certificate validity period to 365 days (you can adjust this number as needed).
-      - **-out cert.pem**: This specifies the output file for the certificate (**cert.pem**).
-      - The command will output two files:
-           - **key.pem**: This is the private key file.
-           - **cert.pem**: This is the self-signed SSL certificate.
-           - Replace these two files with the ones I have created
-   4. After executing the command, you will be prompted to fill out some information for the certificate. Fill in your information accordingly.
-      - I have attached the video I found the most helpful to [create](https://www.youtube.com/watch?v=Dci5-OaIGNQ) an SSL certificate.
-      - One remark about it: I had to input **localhost** as the **common name** in order to get it working.
-   5. Final steps:
-      - After completing the prompts, you should have the two **.pem** files.
-      - **Place them in your project directory** so that the code can find and use them when it’s executed.
-
+        **2. Create a Certificate Signing Request (CSR):**
+        ```bash
+        openssl req -new -key private.key -out cert.csr -config openssl.cnf
+        ```
+        **3. Generate the Self-Signed Certificate:**
+        ```bash
+        openssl x509 -req -days 365 -in cert.csr -signkey private.key -out cert.pem -extensions v3_req -extfile openssl.cnf
+        ```
+        **4. Combine Private Key and Certificate Into key.pem:**
+        ```bash
+        cat private.key cert.pem > key.pem
+        ```
+     2. **As a last step, we need to add the cert.pem into the MMC(Microsoft Management Console):**
+           1. Press **Win + R**, type **mmc**, and press Enter.
+           2. Add the Certificates Snap-in:
+              1. Go to File → **Add/Remove Snap-in**.
+              2. Select Certificates, click Add.
+              3. Choose Computer Account → Next → Finish.
+           3. Navigate to **Trusted Root Certification Authorities**:
+              1. Expand the tree under **Certificates**.
+           4. Import the *cert.pem* File:
+                 1. Right-click Certificates → All Tasks → Import.
+                 2. Select your *cert.pem* file
+                    - If the *cert.pem* file is not visible, set the file type to **All Files**.
+                 3. Follow the prompts to add it.
+           5. Save & Close.
 
 ## Usage
 
