@@ -29,7 +29,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 2. Navigate into the project folder:
    ```bash
    cd easy-encryption
-3. Create a virtual environment (optional but recommended):
+3. Create a virtual environment:
    ```bash
    python -m venv venv
 4. Install the dependencies:
@@ -37,8 +37,9 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    pip install -r requirements.txt
    ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
+- Ensure that the current directory in Git Bash is your project directory before proceeding. Otherwise, you'll need to manually move all the generated files into your project folder.
 5. Generate the SSL Certificates:
-   1. **Boot up Git Bash** and type in the following command:
+   1. **Boot up Git Bash**:
       - By default, Git Bash includes the ability to create SSL certificates.
       - Run the following command to generate them:
         **1. Generate a Private Key:**
