@@ -36,6 +36,27 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    pip install -r requirements.txt
    ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
+5. Generate the SSL Certificates:
+   1. Time to boot up the Git Bash terminal and type in the following:
+      - By default Git Bash comes with the "ability" to create SSL certificates
+        
+        ```bash
+        openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pem
+        ```
+        ![Example](assets/ssl_creation.jpg)
+   3. Let's break down what everything means:
+      - **openssl req**: This command tells OpenSSL to create a new certificate request
+      - **-newkey rsa:2048**: This creates a new RSA private key with a length of 2048 bits.
+      - **-nodes**: This option means "No DES," which ensures that the private key will not be encrypted with a passphrase (making it easier for servers to use).
+      - **-keyout key.pem**: This specifies the file where the private key will be saved (**key.pem**).
+      - **-x509**:  This tells OpenSSL to create a self-signed certificate (instead of generating a certificate signing request (CSR)).
+      - **-days 365**: This sets the certificate validity period to 365 days (you can adjust this number as needed).
+      - **-out cert.pem**: This specifies the output file for the certificate (**cert.pem**).
+      - It will output two files:
+           - **key.pem**: This is the private key file.
+           - **cert.pem**: This is the self-signed SSL certificate.
+           - Replace these two files with the ones I have created
+
 
 ## Usage
 
