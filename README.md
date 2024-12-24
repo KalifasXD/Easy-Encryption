@@ -7,14 +7,18 @@ The Easy Encryption System is a Python-based application that provides a secure,
 - [Usage](#usage)
 - [Contributing](#contributing)
 
+1. I have imported both my SSL certificates and my MongoDB query connection because I did not wish to upload an incomplete project. It should go without saying, but before attempting to run the program, **YOU NEED to replace them with your own SSL certificates and MongoDB database**. It's not secure to use SSL certificates and databases that have been made publicly available (even if you're only testing on your local machine).
+2. **DO NOT TRUST THE SSL CERTIFICATES AND MONGODB CONNECTION I HAVE ALREADY CREATED. SWAP THEM FOR YOURS**.
+
 
 ## Prerequisites
-Do not be afraid if links are broken. Most of the prerequisites are easy to find with just a simple name search on Google!
+Don't worry if some links are broken. Most of the prerequisites are easy to find with a simple name search on Google!
 1. Python 3.10+
 2. A working version of [PIP](https://pypi.org/project/pip/)
-3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not actually required but very much recommended. It makes adding libraries to the python project, extremely easy)
-4. Git Bash terminal(will be used to create the SSL certificates)
-5. 
+3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy)
+4. Git Bash terminal(used to create the SSL certificates)
+5. [MongoDB](https://www.mongodb.com/products/platform/atlas-database)(You will need to create a database and three collections. I recommend using my naming for each respective collection (which are already hardcoded in the code) so you don’t have to change them yourself.)
+   - It’s recommended that you look up a tutorial on how to set up MongoDB and connect it with your application/website backend if you are not familiar with the process.
 
 ## Installation
 
@@ -30,7 +34,8 @@ Do not be afraid if links are broken. Most of the prerequisites are easy to find
 4. Install the dependencies:
    ```bash
    pip install -r requirements.txt
-   (If you have PyCharm, PyCharm will let you know that you can use this file to install the required dependencies once you have booted up the project!
+   ```
+   - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
 
 ## Usage
 
@@ -49,13 +54,14 @@ Do not be afraid if links are broken. Most of the prerequisites are easy to find
 5. Now navigate back to the folder you accessed in step 2.
    ```bash
    cd ../..
-This will take you back two times
+   ```
+   - *The above command should get to the same position as you were in the second step.*
 
 7. Run the following command to start the Flask server
    ```bash
    python main.py
    
-If you have completed every step successfully, it should look like this:
+8. If you have completed every step successfully, it should look like this:
 ![server_running](assets/server_running.jpg)
 
 That’s it! You should now get a message saying the Flask server is up and running.
