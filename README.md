@@ -10,7 +10,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/easy-encryption.git
+   git clone [https://github.com/yourusername/easy-encryption.git](https://github.com/KalifasXD/Easy-Encryption)
 2. Navigate into the project folder:
    ```bash
    cd easy-encryption
