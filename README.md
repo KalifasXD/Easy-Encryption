@@ -7,8 +7,8 @@ The Easy Encryption System is a Python-based application that provides a secure,
 - [Usage](#usage)
 - [Contributing](#contributing)
 
-1. I have imported both my SSL certificates and my MongoDB query connection because I did not wish to upload an incomplete project. It should go without saying, but before attempting to run the program, **YOU NEED to replace them with your own SSL certificates and MongoDB database**. It's not secure to use SSL certificates and databases that have been made publicly available (even if you're only testing on your local machine).
-2. **DO NOT TRUST THE SSL CERTIFICATES AND MONGODB CONNECTION I HAVE ALREADY CREATED. SWAP THEM FOR YOURS**.
+1. I’ve only included the *.cnf* file because it allows you to generate your own SSL certificates. So, don’t worry if you don’t see any certificates in the GitHub project.
+2. Update the *MONGO_URI* to point to your own MongoDB database; otherwise, all of your queries will be logged in my test database.
 
 
 ## Prerequisites
