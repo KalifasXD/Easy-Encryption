@@ -13,12 +13,12 @@ The Easy Encryption System is a Python-based application that provides a secure,
 
 ## Prerequisites
 Don't worry if some links are broken. Most of the prerequisites are easy to find with a simple name search on Google!
-1. Python 3.10+
-2. A working version of [PIP](https://pypi.org/project/pip/)
-3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy)
-   - Some familiarity with IDEs is expected
-5. Git Bash terminal(used to create the SSL certificates)
-6. [MongoDB](https://www.mongodb.com/products/platform/atlas-database)(You will need to create a database and three collections. I recommend using my naming for each respective collection (which are already hardcoded in the code) so you don’t have to change them yourself.)
+1. Python 3.10+.
+2. A working version of [PIP](https://pypi.org/project/pip/).
+3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
+   - Some familiarity with IDEs is expected.
+5. Git Bash terminal(used to create the SSL certificates).
+6. [MongoDB](https://www.mongodb.com/products/platform/atlas-database)(You will need to create a database and three collections. I recommend using my naming for each respective collection (which are already hardcoded in the code) so you don’t have to change them yourself).
    - It’s recommended that you look up a tutorial on how to set up MongoDB and connect it with your application/website backend if you are not familiar with the process.
 
 ## Installation
