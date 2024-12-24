@@ -2,10 +2,18 @@
 The Easy Encryption System is a Python-based application that provides a secure, encrypted platform for file sharing and storage. Leveraging advanced cryptographic methods and a robust user authentication system, this application ensures data integrity, confidentiality, and access control.
 
 ## Table of Contents
+- [License](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
+
+## Prerequisites
+1. Python 3.10+
+2. A working version of PIP
+3. PyCharm(not actually required but very much recommended. It makes adding libraries to the python project, extremely easy)
+4. Git Bash terminal(will be used to create the SSL certificates)
+5. 
 
 ## Installation
 
