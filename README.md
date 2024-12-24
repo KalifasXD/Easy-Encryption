@@ -37,8 +37,8 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
 5. Generate the SSL Certificates:
-   1. Time to boot up the Git Bash terminal and type in the following:
-      - By default Git Bash comes with the "ability" to create SSL certificates
+   1. **Boot up Git Bash** and type in the following command:
+      - By default, Git Bash includes the ability to create SSL certificates. Run the following command to generate them:
         
         ```bash
         openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pem
@@ -50,12 +50,19 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
       - **-nodes**: This option means "No DES," which ensures that the private key will not be encrypted with a passphrase (making it easier for servers to use).
       - **-keyout key.pem**: This specifies the file where the private key will be saved (**key.pem**).
       - **-x509**:  This tells OpenSSL to create a self-signed certificate (instead of generating a certificate signing request (CSR)).
+           - This is important because we are testing locally. For production environments, you'd need to get a certificate from a trusted Certificate Authority (CA).
       - **-days 365**: This sets the certificate validity period to 365 days (you can adjust this number as needed).
       - **-out cert.pem**: This specifies the output file for the certificate (**cert.pem**).
-      - It will output two files:
+      - The command will output two files:
            - **key.pem**: This is the private key file.
            - **cert.pem**: This is the self-signed SSL certificate.
            - Replace these two files with the ones I have created
+   4. After executing the command, you will be prompted to fill out some information for the certificate. Fill in your information accordingly.
+      - I have attached the video I found the most helpful to [create](https://www.youtube.com/watch?v=Dci5-OaIGNQ) an SSL certificate.
+      - One remark about it: I had to input **localhost** as the **common name** in order to get it working.
+   5. Final steps:
+      - After completing the prompts, you should have the two **.pem** files.
+      - **Place them in your project directory** so that the code can find and use them when it’s executed.
 
 
 ## Usage
