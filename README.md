@@ -11,9 +11,12 @@ The Easy Encryption System is a Python-based application that provides a secure,
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/easy-encryption.git
-Navigate into the project folder:
-cd easy-encryption
-Create a virtual environment (optional but recommended):
-python -m venv venv
-Install the dependencies:
-pip install -r requirements.txt
+2. Navigate into the project folder:
+   ```bash
+   cd easy-encryption
+3. Create a virtual environment (optional but recommended):
+   ```bash
+   python -m venv venv
+4. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
