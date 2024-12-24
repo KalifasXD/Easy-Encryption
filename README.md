@@ -36,21 +36,27 @@ Do not be afraid if links are broken. Most of the prerequisites are easy to find
 
 1. First and foremost, you will need to launch the server script(Server_Launch.py).
    ```bash
-   Open powershell/terminal
+   Open PowerShell or terminal
    
-2. Navigate the project folder(where the clone was downloaded).
+2. Navigate to the project folder (where the clone was downloaded).
 
-3. While inside of the project file navigate to.
+3. While inside the project folder, navigate to.
    ```bash
    cd ../venv/scripts
-4. Now call ./activate to enable the flask server.
+4. Now, call ./activate to enable the Flask server.
    ```bash
    ./activate
-5. Now navigate back to where you navigated on the 2nd step.
+5. Now navigate back to the folder you accessed in step 2.
+   ```bash
+   cd ../..
+This will take you back two times
 
-6. Run the following command to start the flask server python main.py
-It should look something like this
+7. Run the following command to start the Flask server
+   ```bash
+   python main.py
+   
+If you have completed every step successfully, it should look like this:
 ![server_running](assets/server_running.jpg)
 
-That’s it. You should now get a message saying the flask server is up and running.
-This script is responsible for holding all of the server logic. It is what "listens" for requests and acts accordingly. Obviously, if you edit the script, make sure to re-run it before testing out the changes you made.
+That’s it! You should now get a message saying the Flask server is up and running.
+This script is responsible for holding all of the server logic. It is what "listens" for requests and acts accordingly. If you make any changes to the script, remember to re-run it before testing your changes.
