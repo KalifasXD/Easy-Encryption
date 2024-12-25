@@ -177,7 +177,7 @@ This script is responsible for holding all of the server logic. It is what "list
    - Handles scenarios like invalid tokens, missing data, large files, and tampered files with detailed error responses.
 
 ### System Architecture
-![architecture](assets/System Architecture.png)
+![architecture](assets/System Architecture.jpg)
 ![architecture2](assets/System Architecture2.png)
 
 ### User Workflow
