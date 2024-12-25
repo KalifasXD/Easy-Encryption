@@ -5,7 +5,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
+- [Features](#features)
 
 1. I’ve only included the *.cnf* file because it allows you to generate your own SSL certificates. So, don’t worry if you don’t see any certificates in the GitHub project.
 2. Update the *MONGO_URI* to point to your own MongoDB database; otherwise, all of your queries will be logged in my test database.
@@ -139,3 +139,55 @@ This script is responsible for holding all of the server logic. It is what "list
    1. Enter the desired username and password in their respective fields.
    2. Click the **Register** button.
    3. A confirmation message will indicate successful account creation.
+  
+## Features
+1. User Authentication
+   - Users can register and log in using unique credentials.
+   - User passwords are hashed for secure storage.
+   - Public and private keys are generated for each user during registration.
+   
+2. File Upload
+   - Files are encrypted using AES before upload.
+   - Metadata, including file size, original file extension, and a SHA-256 hash, is stored securely.
+   - File uploads are validated against a maximum size limit (500 MB).
+     
+3. File Sharing
+   - Owners can share files with other users by encrypting symmetric keys with the recipient's public key.
+   - Shared files' access details are updated in a MongoDB database.
+     
+4. File Download
+   - Users can download files they own or that have been shared with them.
+   - Files are decrypted locally after download, restoring their original format.
+
+5. User Management
+   - Retrieve a list of all usernames for sharing purposes.
+   - Revoke access for users previously shared files.
+     
+6. File Management
+   - Compress files before upload and decompress them after download.
+   - Support for deleting files and their associated metadata.
+
+7. Security
+   - JWT-based token authentication for secure API access.
+   - RSA encryption for sharing symmetric keys.
+   - AES encryption for file contents with additional validation using SHA-256 hashes.
+   - Encrypted private keys stored locally using DPAPI (Windows).
+     
+8. Error Handling
+   - Handles scenarios like invalid tokens, missing data, large files, and tampered files with detailed error responses.
+
+### System Architecture
+![architecture](assets/System Architecture.png)
+![architecture2](assets/System Architecture2.png)
+
+### User Workflow
+![workflow](assets/User Workflow.png)
+
+### Dependencies and Libraries
+   - Cryptography: RSA and AES encryption.
+   - Tkinter: GUI for user interaction.
+   - PyMongo: MongoDB integration.
+   - Flask: API backend.
+   - Werkzeug: File handling utilities.
+   - Requests: HTTP requests for API calls.
+   - OS & Pathlib: File system operations.
