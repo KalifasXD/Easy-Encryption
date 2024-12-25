@@ -102,3 +102,28 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 That’s it! You should now get a message saying the Flask server is up and running.
 This script is responsible for holding all of the server logic. It is what "listens" for requests and acts accordingly. If you make any changes to the script, remember to re-run it before testing your changes.
+
+- Assuming the server has been successfully initialized, the most challenging part of the setup process should now be complete.
+
+#### All you got now left is to configure the client
+
+1. Open the project in an Integrated Development Environment (IDE), preferably **PyCharm**.
+
+2. Configure the MongoDB settings to connect to your specific database instance.
+   1. Refer to the official MongoDB documentation page for detailed instructions on creating and connecting a MongoDB database to a Python script: [MongoDB Documentation](https://www.mongodb.com/docs/atlas/atlas-ui/databases/).
+   2. By default, you are only required to:
+      - Create the database(Ensure the database name is updated within the **Config.py** file. The variable to modify is **database_name**).
+      - Update the query string located in the Config.py file by replacing the provided credentials with your own.
+   3. The **collections** are dynamically created when an element is added to them if they do not already exist.
+   4. To modify collection names:
+      - Navigate to the Config.py file.
+      - Replace the existing collection names with names of your choice.
+   5. The query string mentioned in Step 2(**One of the two modifications required to establish a connection with the database**).
+      ```bash
+         MONGO_URI = "mongodb+srv://vasilis944:qEmWxlrXh2Hlssf1@cluster0.z56q5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+      ```
+3. This completes all the necessary configuration. You can now execute the Python script (by clicking the green arrow in the top-right corner of your IDE or the respective execution button of the IDE you chose) and proceed to register a new user to get started.
+4. To register a new user:
+   1. Enter the desired username and password in their respective fields.
+   2. Click the **Register** button.
+   3. A confirmation message will indicate successful account creation.
