@@ -177,11 +177,11 @@ This script is responsible for holding all of the server logic. It is what "list
    - Handles scenarios like invalid tokens, missing data, large files, and tampered files with detailed error responses.
 
 ### System Architecture
-![architecture](assets/System Architecture.jpg)
-![architecture2](assets/System Architecture2.png)
+![architecture](assets/System_Architecture.jpg)
+![architecture2](assets/System_Architecture_2.png)
 
 ### User Workflow
-![workflow](assets/User Workflow.png)
+![workflow](assets/User_Workflow.png)
 
 ### Dependencies and Libraries
    - Cryptography: RSA and AES encryption.
