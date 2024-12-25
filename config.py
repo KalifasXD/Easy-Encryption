@@ -15,16 +15,25 @@ UPLOAD_FOLDER = 'uploads'
 MONGO_URI = "mongodb+srv://vasilis944:qEmWxlrXh2Hlssf1@cluster0.z56q5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 SECRET_KEY = os.getenv("ENCRYPTION_KEY")
 saved_token = ''
+
 # Connect to MongoDB
 client = MongoClient(MONGO_URI)
+
+
+# Mongo DB Settings
+database_name = 'secure_file_transfer'
+users_collection_names = 'users'
+action_logs_collection_names = 'action_logs'
+uploaded_files_collection_names = 'uploaded_files'
+
 # Access the database
-db = client["secure_file_transfer"]
+db = client[database_name]
 
 # Access a collection
-collection_users = db["users"]
+collection_users = db[users_collection_names]
 collection_users.create_index("username", unique=True)
-collection_logs = db["action_logs"]
-collection_files = db["uploaded_files"]
+collection_logs = db[action_logs_collection_names]
+collection_files = db[uploaded_files_collection_names]
 
 def get_JwT_Token():
     return saved_token
