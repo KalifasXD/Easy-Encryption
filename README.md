@@ -37,8 +37,20 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    pip install -r requirements.txt
    ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
+5. You need to set up an environment variable for the secret key used in file encryption.
+   #### Here’s how to create a Windows environment variable:
+   1. Open the Command Prompt (CMD) and type the following:
+      ```bash
+         setx ENCRYPTION_KEY "YourHexadecimalKey" /M
+      ```
+   - For the value, you need a **valid 64-character hexadecimal string**, which corresponds to a 256-bit key (32 bytes). You can use this [tool](https://www.browserling.com/tools/random-hex) to generate the required string. Just ensure you change the length from 32 to 64 before generating the key. Be sure to enclose the generated string within the quotation marks **("")**.
+     
+   - Example of successfully creating an encryption key:
+     ```bash
+        setx ENCRYPTION_KEY "cc212408572d1dccecfa07892b96b7e49741b810de13078a89dacaf852612f96" /M
+     ```
 - Ensure that the current directory in Git Bash is your project directory before proceeding. Otherwise, you'll need to manually move all the generated files into your project folder.
-5. Generate the SSL Certificates:
+6. Generate the SSL Certificates:
    1. **Boot up Git Bash**:
       - By default, Git Bash includes the ability to create SSL certificates.
       - Run the following command to generate them:
