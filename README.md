@@ -4,7 +4,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Getting Started](#getting_started)
+- [Getting Started](#getting-started)
 - [Contributing](#contributing)
 
 1. I’ve only included the *.cnf* file because it allows you to generate your own SSL certificates. So, don’t worry if you don’t see any certificates in the GitHub project.
