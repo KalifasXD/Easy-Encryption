@@ -15,7 +15,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 Don't worry if some links are broken. Most of the prerequisites are easy to find with a simple name search on Google!
 1. [Python 3.10.8]([https://www.python.org/downloads/](https://www.python.org/downloads/release/python-3108/)).
 2. A working version of [PIP](https://pypi.org/project/pip/).
-3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
+3. [PyCharm Community Edition]([https://www.jetbrains.com/pycharm/download/?section=windows](https://www.jetbrains.com/pycharm/download/other.html)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
    - Some familiarity with IDEs is expected.
 5. [Git Bash](https://git-scm.com/downloads) terminal(used to create the SSL certificates).
 6. [MongoDB](https://www.mongodb.com/products/platform/atlas-database)(You will need to create a database and three collections. I recommend using my naming for each respective collection (which are already hardcoded in the code) so you don’t have to change them yourself).
@@ -33,11 +33,14 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    ```bash
    python -m venv venv
 4. Install the dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+  1. In order to install the dependencies you will need to get the virtual environment up and running(which should provide you with PIP)
+  2. Navigate into the ./venv/Scripts directory and call the .\activate. You should see the (venv)[working directory] in the powershell.
+  3. Then while inside of the Scripts folder call the following. the path/to/the is your local path to where the requirements.txt file is located.
+      ```bash
+      pip install -r path/to/the/requirements.txt
+      ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
-5. You need to set up an environment variable for the secret key used in file encryption.
+6. You need to set up an environment variable for the secret key used in file encryption.
    #### Here’s how to create a Windows environment variable:
    1. Open the Command Prompt (CMD) and type the following:
       ```bash
@@ -45,7 +48,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
       ```
    - For the value, you need a **valid 64-character hexadecimal string**, which corresponds to a 256-bit key (32 bytes). You can use this [tool](https://www.browserling.com/tools/random-hex) to generate the required string. Just ensure you change the length from 32 to 64 before generating the key. Be sure to enclose the generated string within the quotation marks **("")**.
      
-   - Example of successfully creating an encryption key:
+   - Example of successfully creating an encryption key(make sure to remove any not required spaces:
      ```bash
         setx ENCRYPTION_KEY "cc212408572d1dccecfa07892b96b7e49741b810de13078a89dacaf852612f96" /M
      ```
