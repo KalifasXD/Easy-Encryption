@@ -22,7 +22,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - It’s recommended that you look up a tutorial on how to set up MongoDB and connect it with your application/website backend if you are not familiar with the process.
 
 ## Installation
-
+0. Ensure you have Python 3.10.8, PyCharm, and Git installed before beginning the installation process.
 1. Clone the repository:
    ```bash
    git clone https://github.com/KalifasXD/easy-encryption.git
