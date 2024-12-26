@@ -13,7 +13,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 
 ## Prerequisites
 Don't worry if some links are broken. Most of the prerequisites are easy to find with a simple name search on Google!
-1. [Python 3.10+](https://www.python.org/downloads/).
+1. [Python 3.10.8]([https://www.python.org/downloads/](https://www.python.org/downloads/release/python-3108/)).
 2. A working version of [PIP](https://pypi.org/project/pip/).
 3. [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
    - Some familiarity with IDEs is expected.
