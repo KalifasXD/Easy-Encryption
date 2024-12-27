@@ -32,7 +32,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 4. Clone the repository or download it:
    ```bash
    git clone https://github.com/KalifasXD/easy-encryption.git
-5. Navigate into the project folder:
+5. Open a new powershell terminal and navigate into the project folder:
    ```bash
    cd easy-encryption
 6. Create a virtual environment:
@@ -52,17 +52,17 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
      
    3. Install Required Dependencies:
       - While inside the Scripts folder, use the following command to install the required dependencies:
-         - ```bash
-            pip install -r path/to/the/requirements.txt
-            ```
-           Replace path/to/the with the actual path to your requirements.txt file.
+         ```bash
+         pip install -r path/to/the/requirements.txt
+         ```
+         - Replace path/to/the with the actual path to your requirements.txt file.
 
    4. Using PyCharm (Optional):
       - If you're working in PyCharm, it will automatically notify you about the requirements.txt file when you open the project. You can use this notification to install the dependencies directly within the editor.
         
 8. You need to set up an environment variable for the secret key used in file encryption.
    #### Here’s how to create a Windows environment variable:
-   1. Open the Command Prompt (CMD) as an administrator and type the following:
+   1. Open the Command Prompt (CMD) as an **administrator** and type the following:
       ```bash
          setx ENCRYPTION_KEY "YourHexadecimalKey" /M
       ```
