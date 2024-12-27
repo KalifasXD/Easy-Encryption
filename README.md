@@ -8,7 +8,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 - [Features](#features)
 
 1. I’ve only included the *.cnf* file because it allows you to generate your own SSL certificates. So, don’t worry if you don’t see any certificates in the GitHub project.
-2. Update the *MONGO_URI* to point to your own MongoDB database; otherwise, all of your queries will be logged in my test database.
+2. Update the *MONGO_URI* to point to your own MongoDB database; otherwise, any attempt to run the program will result in a database error.
 
 
 ## Prerequisites
