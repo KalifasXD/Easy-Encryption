@@ -29,7 +29,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - During installation, add the bin folder to the system PATH by selecting the corresponding option.
 3. **Install Git Bash**:
    - Download and install Git Bash. Once installed, restart your computer to ensure all changes, especially to system PATH variables, are applied.
-4. Clone the repository:
+4. Clone the repository or download it:
    ```bash
    git clone https://github.com/KalifasXD/easy-encryption.git
 5. Navigate into the project folder:
@@ -39,14 +39,27 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    ```bash
    python -m venv venv
 7. Install the dependencies:
-   1. In order to install the dependencies you will need to get the virtual environment up and running(which should provide you with PIP)
-   2. Navigate into the ./venv/Scripts directory and call the .\activate. You should see the (venv)[working directory] in the powershell.
-   3. Then while inside of the Scripts folder call the following. the path/to/the is your local path to where the requirements.txt file is located.
-      
-      ```bash
-      pip install -r path/to/the/requirements.txt
-      ```
-   - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
+   1. Set up the Virtual Environment:
+      - Start by setting up the virtual environment, which will provide you with pip (the Python package installer).
+     
+   2. Activate the Virtual Environment:
+      - Navigate to the **./venv/Scripts** directory.
+      - Run the following command in PowerShell to activate the virtual environment:
+         ```bash
+            .\activate
+         ```
+      - Once activated, you should see (venv) followed by your working directory in the PowerShell prompt.
+     
+   3. Install Required Dependencies:
+      - While inside the Scripts folder, use the following command to install the required dependencies:
+         - ```bash
+            pip install -r path/to/the/requirements.txt
+            ```
+           Replace path/to/the with the actual path to your requirements.txt file.
+
+   4. Using PyCharm (Optional):
+      - If you're working in PyCharm, it will automatically notify you about the requirements.txt file when you open the project. You can use this notification to install the dependencies directly within the editor.
+        
 8. You need to set up an environment variable for the secret key used in file encryption.
    #### Here’s how to create a Windows environment variable:
    1. Open the Command Prompt (CMD) as an administrator and type the following:
