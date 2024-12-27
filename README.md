@@ -158,6 +158,11 @@ This script is responsible for holding all of the server logic. It is what "list
       ```bash
          MONGO_URI = "mongodb+srv://vasilis944:qEmWxlrXh2Hlssf1@cluster0.z56q5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
       ```
+      - Update the Query String:
+         - MongoDB will provide you with a unique query string for connecting to your database.
+         - Replace the existing query string in the code with the one you receive.
+         - Ensure you include your database user credentials (username and password) in the provided query string for a successful connection.
+       
 3. This completes all the necessary configuration. You can now execute the Python script (by clicking the green arrow in the top-right corner of your IDE or the respective execution button of the IDE you chose) and proceed to register a new user to get started.
 4. To register a new user:
    1. Enter the desired username and password in their respective fields.
