@@ -1,14 +1,14 @@
-import datetime, requests, base64, json
+import datetime, requests, base64, json, sys
 from enum import Enum
-
-import jwt
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import padding
 import win32crypt, os, zipfile, tarfile
-from pymongo import MongoClient
+from pymongo import MongoClient, errors
+import tkinter as tk
+from tkinter import messagebox
 
 MAX_CONTENT_LENGTH = 500 * 1024 * 1024  # 500 MB LIMIT
 UPLOAD_FOLDER = 'uploads'
@@ -16,24 +16,42 @@ MONGO_URI = "mongodb+srv://vasilis944:qEmWxlrXh2Hlssf1@cluster0.z56q5.mongodb.ne
 SECRET_KEY = os.getenv("ENCRYPTION_KEY")
 saved_token = ''
 
-# Connect to MongoDB
-client = MongoClient(MONGO_URI)
+# Function to show error message and exit
+def show_database_error_and_exit(error_message):
+    def on_ok():
+        root.destroy()  # Close the message box
+        sys.exit(1)  # Exit the program
 
+    root = tk.Tk()
+    root.withdraw()  # Hide the main Tkinter window
+    messagebox.showerror("Database Connection Error", error_message)
+    root.protocol("WM_DELETE_WINDOW", on_ok)  # Handle window close
+    on_ok()
 
-# Mongo DB Settings
-database_name = 'secure_file_transfer'
-users_collection_names = 'users'
-action_logs_collection_names = 'action_logs'
-uploaded_files_collection_names = 'uploaded_files'
+try:
+    # Connect to MongoDB
+    client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
 
-# Access the database
-db = client[database_name]
+    # Mongo DB Settings
+    database_name = 'secure_file_transfer'
+    users_collection_names = 'users'
+    action_logs_collection_names = 'action_logs'
+    uploaded_files_collection_names = 'uploaded_files'
 
-# Access a collection
-collection_users = db[users_collection_names]
-collection_users.create_index("username", unique=True)
-collection_logs = db[action_logs_collection_names]
-collection_files = db[uploaded_files_collection_names]
+    # Access the database
+    db = client[database_name]
+
+    # Access a collection
+    collection_users = db[users_collection_names]
+
+    collection_logs = db[action_logs_collection_names]
+    collection_files = db[uploaded_files_collection_names]
+
+    collection_users.create_index("username", unique=True)
+except errors.ServerSelectionTimeoutError as e:
+    show_database_error_and_exit(f"Failed to connect to the database: {e}")
+except errors.PyMongoError as e:
+    show_database_error_and_exit(f"An error occurred with MongoDB: {e}")
 
 def get_JwT_Token():
     return saved_token
