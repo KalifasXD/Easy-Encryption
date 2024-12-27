@@ -22,27 +22,32 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - It’s recommended that you look up a tutorial on how to set up MongoDB and connect it with your application/website backend if you are not familiar with the process.
 
 ## Installation
-0. Ensure you have Python 3.10.8 installed and added to the path(you should get an option to add it to the path when installing it).
-1. Download and Install the latest version PyCharm Community Edition(It's best if you use PyCharm as it lets you add libraries and dependencies with almost no code. You just get a popup notification while inside of the editor, highly recommended for a new user). Add the bin folder to the path(you should get an option to add it to the path when installing it).
-2. Git installed before beginning the installation process
-3. Clone the repository:
+1. **Install Python 3.10.8**:
+   - Ensure Python 3.10.8 is installed and added to the system PATH. During installation, you should see an option to add Python to the PATH—make sure to select it.
+2. **Download and Install PyCharm Community Edition**:
+   - Install the latest version of PyCharm Community Edition. PyCharm is highly recommended for new users as it simplifies managing libraries and dependencies. For instance, it provides popup notifications within the editor for easy setup.
+   - During installation, add the bin folder to the system PATH by selecting the corresponding option.
+3. **Install Git Bash**:
+   - Download and install Git Bash. Once installed, restart your computer to ensure all changes, especially to system PATH variables, are applied.
+4. Clone the repository:
    ```bash
    git clone https://github.com/KalifasXD/easy-encryption.git
-4. Navigate into the project folder:
+5. Navigate into the project folder:
    ```bash
    cd easy-encryption
-5. Create a virtual environment:
+6. Create a virtual environment:
    ```bash
    python -m venv venv
-6. Install the dependencies:
-  1. In order to install the dependencies you will need to get the virtual environment up and running(which should provide you with PIP)
-  2. Navigate into the ./venv/Scripts directory and call the .\activate. You should see the (venv)[working directory] in the powershell.
-  3. Then while inside of the Scripts folder call the following. the path/to/the is your local path to where the requirements.txt file is located.
+7. Install the dependencies:
+   1. In order to install the dependencies you will need to get the virtual environment up and running(which should provide you with PIP)
+   2. Navigate into the ./venv/Scripts directory and call the .\activate. You should see the (venv)[working directory] in the powershell.
+   3. Then while inside of the Scripts folder call the following. the path/to/the is your local path to where the requirements.txt file is located.
+      
       ```bash
       pip install -r path/to/the/requirements.txt
       ```
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
-6. You need to set up an environment variable for the secret key used in file encryption.
+8. You need to set up an environment variable for the secret key used in file encryption.
    #### Here’s how to create a Windows environment variable:
    1. Open the Command Prompt (CMD) as an administrator and type the following:
       ```bash
@@ -55,7 +60,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
         setx ENCRYPTION_KEY "cc212408572d1dccecfa07892b96b7e49741b810de13078a89dacaf852612f96" /M
      ```
 - Ensure that the current directory in Git Bash is your project directory before proceeding. Otherwise, you'll need to manually move all the generated files into your project folder.
-6. Generate the SSL Certificates:
+9. Generate the SSL Certificates:
    1. **Boot up Git Bash**:
       - By default, Git Bash includes the ability to create SSL certificates.
       - Run the following command to generate them:
@@ -95,14 +100,14 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 1. First and foremost, you will need to launch the server script(Server_Launch.py).
    ```bash
-   Open PowerShell or terminal
+   Open PowerShell
    
 2. Navigate to the project folder (where the clone was downloaded).
 
 3. While inside the project folder, navigate to.
    ```bash
    cd ../venv/scripts
-4. Now, call ./activate to enable the Flask server.
+4. Now, call ./activate to enable the Virtual Environment.
    ```bash
    ./activate
 5. Now navigate back to the folder you accessed in step 2.
