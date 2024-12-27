@@ -22,17 +22,19 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - It’s recommended that you look up a tutorial on how to set up MongoDB and connect it with your application/website backend if you are not familiar with the process.
 
 ## Installation
-0. Ensure you have Python 3.10.8, PyCharm, and Git installed before beginning the installation process.
-1. Clone the repository:
+0. Ensure you have Python 3.10.8 installed and added to the path(you should get an option to add it to the path when installing it).
+1. Download and Install the latest version PyCharm Community Edition(It's best if you use PyCharm as it lets you add libraries and dependencies with almost no code. You just get a popup notification while inside of the editor, highly recommended for a new user). Add the bin folder to the path(you should get an option to add it to the path when installing it).
+2. Git installed before beginning the installation process
+3. Clone the repository:
    ```bash
    git clone https://github.com/KalifasXD/easy-encryption.git
-2. Navigate into the project folder:
+4. Navigate into the project folder:
    ```bash
    cd easy-encryption
-3. Create a virtual environment:
+5. Create a virtual environment:
    ```bash
    python -m venv venv
-4. Install the dependencies:
+6. Install the dependencies:
   1. In order to install the dependencies you will need to get the virtual environment up and running(which should provide you with PIP)
   2. Navigate into the ./venv/Scripts directory and call the .\activate. You should see the (venv)[working directory] in the powershell.
   3. Then while inside of the Scripts folder call the following. the path/to/the is your local path to where the requirements.txt file is located.
@@ -42,7 +44,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    - If you’re using PyCharm, it will notify you that you can use this file to install the required dependencies once you’ve opened the project!
 6. You need to set up an environment variable for the secret key used in file encryption.
    #### Here’s how to create a Windows environment variable:
-   1. Open the Command Prompt (CMD) and type the following:
+   1. Open the Command Prompt (CMD) as an administrator and type the following:
       ```bash
          setx ENCRYPTION_KEY "YourHexadecimalKey" /M
       ```
