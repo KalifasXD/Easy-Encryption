@@ -15,7 +15,7 @@ The Easy Encryption System is a Python-based application that provides a secure,
 Don't worry if some links are broken. Most of the prerequisites are easy to find with a simple name search on Google!
 1. [Python 3.10.8](https://www.python.org/downloads/release/python-3108/).
 2. A working version of [PIP](https://pypi.org/project/pip/).
-3. [PyCharm Community Edition]([https://www.jetbrains.com/pycharm/download/?section=windows](https://www.jetbrains.com/pycharm/download/other.html)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
+3. [PyCharm Community Edition](https://www.jetbrains.com/pycharm/download/other.html)(not required, but very much recommended—it makes adding libraries to the Python project extremely easy).
    - Some familiarity with IDEs is expected.
 5. [Git Bash](https://git-scm.com/downloads) terminal(used to create the SSL certificates).
 6. [MongoDB](https://www.mongodb.com/products/platform/atlas-database)(You will need to create a database and three collections. I recommend using my naming for each respective collection (which are already hardcoded in the code) so you don’t have to change them yourself).
