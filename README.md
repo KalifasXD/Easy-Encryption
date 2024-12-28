@@ -121,7 +121,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 3. While inside the project folder, navigate to.
    ```bash
-   cd ../venv/scripts
+   cd venv/scripts
 4. Now, call ./activate to enable the Virtual Environment.
    ```bash
    ./activate
