@@ -133,7 +133,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 7. Run the following command to start the Flask server
    ```bash
-   python main.py
+   python Server_Launch.py
    
 8. If you have completed every step successfully, it should look like this:
 ![server_running](assets/server_running.jpg)
