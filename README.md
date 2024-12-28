@@ -43,7 +43,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
       - Start by setting up the virtual environment, which will provide you with pip (the Python package installer).
      
    2. Activate the Virtual Environment:
-      - Navigate to the **./venv/Scripts** directory.
+      - Navigate to the **./venv/Scripts** directory in your previously opened Powershell.
       - Run the following command in PowerShell to activate the virtual environment:
          ```bash
             .\activate
