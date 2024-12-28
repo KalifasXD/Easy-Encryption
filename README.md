@@ -77,6 +77,8 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    1. **Boot up Git Bash**:
       - By default, Git Bash includes the ability to create SSL certificates.
       - Run the following command to generate them:
+     
+
          **1. Generate a Private Key:**
            ```bash
            openssl genrsa -out private.key 2048
