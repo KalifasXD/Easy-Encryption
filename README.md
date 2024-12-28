@@ -77,22 +77,22 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
    1. **Boot up Git Bash**:
       - By default, Git Bash includes the ability to create SSL certificates.
       - Run the following command to generate them:
-        **1. Generate a Private Key:**
-        ```bash
-        openssl genrsa -out private.key 2048
-        ```
-        **2. Create a Certificate Signing Request (CSR):**
-        ```bash
-        openssl req -new -key private.key -out cert.csr -config openssl.cnf
-        ```
-        **3. Generate the Self-Signed Certificate:**
-        ```bash
-        openssl x509 -req -days 365 -in cert.csr -signkey private.key -out cert.pem -extensions v3_req -extfile openssl.cnf
-        ```
-        **4. Combine Private Key and Certificate Into key.pem:**
-        ```bash
-        cat private.key cert.pem > key.pem
-        ```
+         **1. Generate a Private Key:**
+           ```bash
+           openssl genrsa -out private.key 2048
+           ```
+         **2. Create a Certificate Signing Request (CSR):**
+         ```bash
+         openssl req -new -key private.key -out cert.csr -config openssl.cnf
+         ```
+         **3. Generate the Self-Signed Certificate:**
+         ```bash
+         openssl x509 -req -days 365 -in cert.csr -signkey private.key -out cert.pem -extensions v3_req -extfile openssl.cnf
+         ```
+         **4. Combine Private Key and Certificate Into key.pem:**
+         ```bash
+         cat private.key cert.pem > key.pem
+         ```
         - Keep in mind that the .cnf file specifies the **Common Name (CN)** for handling requests, defaulting to *CN = 127.0.0.1*, the local address for ***HTTPS***. If your server listens on a **different** local address, you must ***regenerate the SSL certificates***, setting the CN in the .cnf file to match your server's listening address.
      2. **As a last step, we need to add the cert.pem into the MMC(Microsoft Management Console):**
            1. Press **Win + R**, type **mmc**, and press Enter.
