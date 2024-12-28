@@ -35,7 +35,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 5. Open a new powershell terminal and navigate into the project folder:
    ```bash
    cd easy-encryption
-6. Create a virtual environment:
+6. Create a virtual environment by pasting the quote into your previously opened powershell terminal:
    ```bash
    python -m venv venv
 7. Install the dependencies:
