@@ -113,9 +113,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 ## Getting Started
 
-1. First and foremost, you will need to launch the server script(Server_Launch.py).
-   ```bash
-   Open PowerShell
+1. First and foremost, you will need to launch the server script(Server_Launch.py). So bring up a brand new Powershell terminal
    
 2. Navigate to the project folder (where the clone was downloaded).
 
