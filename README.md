@@ -113,7 +113,7 @@ Don't worry if some links are broken. Most of the prerequisites are easy to find
 
 ## Getting Started
 
-1. First and foremost, you will need to launch the server script(Server_Launch.py). So bring up a brand new Powershell terminal
+1. First and foremost, you will need to launch the server script(Server_Launch.py). So bring up a brand new Powershell terminal.
    
 2. Navigate to the project folder (where the clone was downloaded).
 
@@ -144,8 +144,18 @@ This script is responsible for holding all of the server logic. It is what "list
 #### All you got now left is to configure the client
 
 1. Open the project in an Integrated Development Environment (IDE), preferably **PyCharm**.
+   - Purpose of ***main.py***:
+      - Acts as the client-side of the application.
+      - Serves as the entry point for interacting with the program.
+   - **Setup Instructions**:
+      - Open the project in the PyCharm Editor.
+      - Connect your own MongoDB database to the program before running it.
+   - **Explanation of the Client-Side**:
+      - Refers to the part of the application that users interact with directly.
+      - Includes the user interface and handles user requests.
+      - Facilitates communication with the server to send or retrieve data.
 
-2. Configure the MongoDB settings to connect to your specific database instance.
+3. Configure the MongoDB settings to connect to your specific database instance.
    1. Refer to the official MongoDB documentation page for detailed instructions on creating and connecting a MongoDB database to a Python script: [MongoDB Documentation](https://www.mongodb.com/docs/atlas/atlas-ui/databases/).
    2. By default, you are only required to:
       - Create the database(Ensure the database name is updated within the **Config.py** file. The variable to modify is **database_name**).
@@ -163,8 +173,8 @@ This script is responsible for holding all of the server logic. It is what "list
          - Replace the existing query string in the code with the one you receive.
          - Ensure you include your database user credentials (username and password) in the provided query string for a successful connection.
        
-3. This completes all the necessary configuration. You can now execute the Python script (by clicking the green arrow in the top-right corner of your IDE or the respective execution button of the IDE you chose) and proceed to register a new user to get started.
-4. To register a new user:
+4. This completes all the necessary configuration. You can now execute the Python script (by clicking the green arrow in the top-right corner of your IDE or the respective execution button of the IDE you chose) and proceed to register a new user to get started.
+5. To register a new user:
    1. Enter the desired username and password in their respective fields.
    2. Click the **Register** button.
    3. A confirmation message will indicate successful account creation.
